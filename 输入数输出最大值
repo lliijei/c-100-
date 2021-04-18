@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS //忽略安全检测，不然使用scanf会报错
+#include <stdio.h>
+#include <windows.h>
+void main()
+{
+	int bishu[10];
+	scanf("%d", &bishu[9]);
+	scanf("%d", &bishu[8]);
+	scanf("%d", &bishu[7]);
+	scanf("%d", &bishu[6]);
+	scanf("%d", &bishu[5]);
+	scanf("%d", &bishu[4]);
+	scanf("%d", &bishu[3]);
+	scanf("%d", &bishu[2]);
+	scanf("%d", &bishu[1]);
+	scanf("%d", &bishu[0]);
+	int k,max=0;
+	for (k = 1; k <= 9; k++)
+	{
+		if (max < bishu[k])
+		{max = bishu[k];}
+	}
+	printf("%d\n", max);
+	system("pause");
