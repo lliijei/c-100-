@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS //忽略安全检测，不然使用scanf会报错
+#include <stdio.h>
+#include <windows.h>
+void main()
+{
+	int a;
+	scanf("%d", &a);
+	if (a % 100 == 0)
+	{
+		if (a % 400 == 0)
+			printf("%d是闰年", a);
+		else
+		{
+			printf("%d不是闰年", a);
+		}
+	}
+	else
+	{ if (a % 4 == 0)
+			printf("%d是闰年", a);
+	else
+	{
+		printf("%d不是闰年", a);
+	}
+	}
+}
