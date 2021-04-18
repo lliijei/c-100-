@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS //忽略安全检测，不然使用scanf会报错
+#include <stdio.h>
+#include <windows.h>
+void main()
+{
+	int bishu[10];
+	scanf("%d", &bishu[9]);
+	scanf("%d", &bishu[8]);
+	scanf("%d", &bishu[7]);
+	scanf("%d", &bishu[6]);
+	scanf("%d", &bishu[5]);
+	scanf("%d", &bishu[4]);
+	scanf("%d", &bishu[3]);
+	scanf("%d", &bishu[2]);
+	scanf("%d", &bishu[1]);
+	scanf("%d", &bishu[0]);
+	int k,i,j,b;
+	for (i=1;i<=9;i++)
+	{
+		j = 0;
+		for (k= 1; k <= 9; k++)
+		{
+			if (bishu[j] > bishu[k])//上方大，要交换
+			{
+				b=bishu[j];
+				bishu[j]=bishu[k];
+				bishu[k]=b;
+			}
+			j++;
+		}
+	}
+	printf("从小到大：%d, %d, %d, %d, %d, %d, %d, %d, %d, %d", bishu[0], bishu[1], bishu[2], bishu[3], bishu[4], bishu[5], bishu[6], bishu[7], bishu[8], bishu[9]);
+	system("pause");//pause是DOS下的一个命令。功能是：暂停批处理的执行，显示一个中文信息：“请按任意键继续. . .”
