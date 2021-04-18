@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <windows.h>
+int main()
+{
+    double x, y, i;
+    int a, b;
+    x = 3.0;
+    do {
+        i = 2.0;
+        do {
+            y = x / i;
+            a = (int)y;// 把y转换为int类型并且赋值给a
+            if (y != a)//用于判断是否为整数                                                                                  ！x能否被i 整除
+            {
+                if (i == x - 1)//                                                                                           ! 除数i是否小与x
+                {
+                    b = (int)x;
+                    printf("%d\n", b);
+                }
+            }
+            i++;
+        } while (y != a);//                                                                                                !!循环到y等于a
+        x++;
+    } while (x <= 10000.0);//3到10000的素数      ！！！最外层while函数X可等于10000，循环变量X初值为3，循环9997次,执行一次看看
+    system("pause");//防止闪退
+    return 0;
+}
