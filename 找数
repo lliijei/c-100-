@@ -1,0 +1,19 @@
+#include<stdio.h>
+void main()
+{
+	int j = 0;
+	int i = 0;
+	int x = 0;
+    int arr[7] = { 88,88,99,99,7,7,6 };
+	for (j = 0; j <= 7; j++)
+	{
+		for (i = 0; i <= j; i++)
+		{
+			x = arr[i] ^ arr[j];
+			if (x == 1)
+				goto end;
+		}
+	}
+end:
+	printf("%d", arr[j]);
+}
