@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<math.h>
+double xun_jiacheng(int a)
+{
+	double arr[32] = { 0 };
+    int y = 0;
+	double x = 0;
+	double d= 2;
+	int i = 0;
+	double c = 0;
+	double k = 0;
+	double b = 0;
+	for (y = 0; y <= 31; y++)//得到源码有效部分arr={10011}，个数减1:y
+	{
+		x = a % 2;
+		arr[y] = x;
+		a = a / 2;
+		if (a==0)
+		{
+			break;
+		}
+	}
+	x=32-(y+1);
+	for (i = y; i >= 0; i--)//循环加
+	{
+	    b = arr[i] * pow(d, x);
+		x++;
+		c = c + b;
+	}
+	return c;
+}
+int main()
+{
+    double c = 0;
+	c=xun_jiacheng(25);
+	printf("是%f", c);
+	return 0;
+}
